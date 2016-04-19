@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人首页</title>
+	<link rel="stylesheet" href="css/self.css">
+	<style>
+		.shot-box{
+
+			border-radius: 50%;
+			border: 8px solid hsla(0,0%,100%,.5);
+			position: fixed;
+			left:50%;
+			top: 100%;
+			-webkit-transition: left 0.5s linear .1s,
+				top 0.5s cubic-bezier(.53,.85,.66,.84);
+			-moz-transition: left 0.5s linear .1s,
+				top 0.5s cubic-bezier(.53,.85,.66,.84);
+			transition: left 0.5s linear .1s,
+				top 0.5s cubic-bezier(.53,.85,.66,.84);
+		}
+		.shot-box img{
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<nav class="nav">
+			<div class="nav-self">
+				<div class="self-face">
+					<img src="img/face.jpg" alt="">
+				</div>
+				<div class="self-des">
+					<span class="self-name">张三疯</span>
+					<span class="self-address">来自天津</span>
+				</div>
+			</div>
+			<!-- /.self -->
+			<div class="nav-time">
+				<div class="time-now">
+					00:00
+				</div>
+				<div class="time-review">
+					已经游览时间<br>
+					<span>2</span>小时<span>15</span>分
+				</div>
+			</div>
+			<!-- /.nav-time -->
+			<ul class="nav-list">
+				<li class="active"><a href="">我的首页</a></li>
+				<li><a href="">我的博物馆路线</a></li>
+				<li><a href="">我的收藏</a></li>
+				<li><a href="">我的浏览历史</a></li>
+				<li><a href="">我的游览路线</a></li>
+				<li><a href="">我的好友</a></li>
+				<li><a href="">我的互动游戏</a></li>
+			</ul>
+			<div class="nav-battery">
+				<span>电量 </span>
+				<progress value="85" max="100"></progress>
+				<span>85%</span>
+			</div>
+			<!-- /.nav-battery -->
+		</nav>
+		<!-- /.nav -->
+		<div class="content">
+			<div class="content-share">
+				<div class="share-item share-item-1">
+					<img src="img/share01.jpg" alt="">
+					<span class="share-wall">
+						已上墙<br>排名 30
+					</span>
+					<span class="share-praise">80</span>
+				</div>
+				<!-- /.share-item share-item-1 -->
+				<div class="share-item share-item-2">
+					<img src="img/share02.jpg" alt="">
+					<span class="share-wall">
+						已上墙<br>排名 30
+					</span>
+					<span class="share-praise">80</span>
+				</div>
+				<!-- /.share-item share-item-2 -->
+				<div class="share-item share-item-3">
+					<img src="img/share03.jpg" alt="">
+					<span class="share-wall">
+						已上墙<br>排名 30
+					</span>
+					<span class="share-praise">80</span>
+				</div>
+				<!-- /.share-item share-item-3 -->
+				<div class="share-item share-item-4">
+					<img src="img/share04.jpg" alt="">
+					<span class="share-wall">
+						已上墙<br>排名 30
+					</span>
+					<span class="share-praise">80</span>
+				</div>
+				<!-- /.share-item share-item-4 -->
+			</div>
+			<!-- /.content-share -->
+			<div class="content-weather">
+				<div class="weather-deg">
+					18 <span>。</span>
+				</div>
+				<!-- ./weather-deg -->
+				<div class="weather-now">
+					当前天气
+				</div>
+				<!-- ./weather-now -->
+				<div class="weather-time">
+					<div class="weather-item">
+						<span class="item-deg">18<span>。</span></span>
+						<span class="item-time">14:00</span>
+					</div>
+					<!-- /.weath-item -->
+					<div class="weather-item">
+						<span class="item-deg">18<span>。</span></span>
+						<span class="item-time">16:00</span>
+					</div>
+					<!-- /.weath-item -->
+					<div class="weather-item">
+						<span class="item-deg">16<span>。</span></span>
+						<span class="item-time">18:00</span>
+					</div>
+					<!-- /.weath-item -->
+				</div>
+				<!-- /.weather-time -->
+			</div>
+			<!-- /.content-weather -->
+			<div class="content-preview">
+				<nav class="preview-nav">
+					<ul>
+						<li class="active"><a href="">我的智慧笔内容</a></li>
+						<li><a href="">博物馆大厅</a></li>
+						<li><a href="">地图导览</a></li>
+					</ul>
+				</nav>
+				<div class="preview-list">
+					<div class="preview-img">		<!-- 替换 -->
+						<img src="img/img01.jpg" alt="">   <!-- 替换 -->
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13<!-- 替换 --></span>  
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img02.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img01.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img02.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img02.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img01.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img02.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img01.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img02.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img01.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img02.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img01.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<div class="preview-img">
+						<img src="img/img01.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img02.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img01.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img02.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img01.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<div class="preview-img">
+						<img src="img/img01.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img02.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img01.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img02.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+					<div class="preview-img">
+						<img src="img/img01.jpg" alt="">
+						<span class="preview-text">游览时间</span>
+						<span class="preview-time">12:13</span>
+					</div>
+					<!-- /.shot-box -->
+				</div>
+				<!-- /.preview-list -->
+			</div>
+			<!-- /.content-preview -->
+		</div>
+		<!-- /.content -->
+	</div>
+	<!-- /.container -->
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<script>
+		// 设置当前时间
+		
+		setInterval(function(){timeShow()}, 500);
+		function timeShow(){
+			var time = new Date();
+			var h = time.getHours();
+			var i = time.getMinutes()<10?('0'+time.getMinutes()):time.getMinutes();
+			// var s = time.getSeconds()<10?('0'+time.getSeconds()):time.getSeconds();
+			$('.time-now').html(h+":"+i);
+		}
+	</script>
+	<script>
+		// $(function(){
+		// 	var box = $('.shot-box');
+		// 	var r = Math.random;
+		// 	var max = 170;
+		// 	var min = 60;
+		// 	var num = Math.floor(Math.random()*(max-min+1)+min);
+
+		// 		var i = 0;
+		// 		long = setInterval(function(){ show() }, 50);
+		// 		function show() {
+		// 			box[i].style.left= r()*60+20+'%';
+		// 			box[i].style.top=r()*40+10+'%';
+		// 			// // 生成随机图片
+		// 			// 	$('.shot-box > img:eq('+i+')')
+		// 			// 		.css({
+		// 			// 			'width': num,
+		// 			// 			'height': num
+		// 			// 		})
+		// 			// 		console.log(i)
+
+		// 			i += 1;
+		// 			if (i >= box.length){
+		// 				clearInterval(long);
+		// 			}
+		// 		}
+
+		// 		setTimeout(function(){list()}, 2000)
+		// 		function list(){
+		// 			box.each(function(index){
+		// 				$(this)
+		// 					.removeClass('shot-box')
+		// 					.removeAttr('style').delay(50)
+		// 					.addClass('preview-img');
+		// 				})
+		// 		}
+
+		// })
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* 重置样式 */
+html {
+  padding: 0;
+  margin: 0;
+}
+body {
+  line-height: 1.4;
+  color: #7A7768;
+  font-family: arial;
+  font-size: 16px;
+}
+input,
+textarea,
+select {
+  font-size: 16px;
+  font-size: 100%;
+  font-family: arial;
+  font-family: inherit;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+form {
+  margin: 0;
+  padding: 0;
+}
+h4,
+h5,
+h6 {
+  font-size: 1em;
+}
+ul,
+ol {
+  padding-left: 0;
+  list-style-type: none;
+}
+img {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
