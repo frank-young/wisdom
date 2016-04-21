@@ -582,7 +582,17 @@ body {
   padding: 10px 0 0 10px;
   float: left;
   position: relative;
+  *zoom: 1;
   /* 单个图片样式 */
+}
+.collect-imgView:after,
+.collect-imgView:before {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
 }
 .collect-imgView .collect-imgView-item {
   width: 214px;
