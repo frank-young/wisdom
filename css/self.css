@@ -50,6 +50,9 @@ img {
 body {
   background: url(../img/bg.jpg) no-repeat top center;
 }
+/**
+ * *********************************** 外层包裹 ***********************************
+ */
 .container {
   width: 1683px;
   height: 900px;
@@ -64,6 +67,11 @@ body {
   -o-border-radius: 10px;
   border-radius: 10px;
   *zoom: 1;
+  -webkit-box-shadow: 5px 17px 20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 5px 17px 20px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 5px 17px 20px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 5px 17px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 17px 20px rgba(0, 0, 0, 0.2);
   /* 个人中心和导航 */
   /* 右侧主体内容 */
 }
@@ -101,6 +109,7 @@ body {
 /**
  * *********************************** 个人中心 （页面左侧整体样式，不用修改）***********************************
  */
+/* 个人信息 */
 .nav-self {
   background-color: #F6F1DE;
   position: relative;
@@ -117,6 +126,7 @@ body {
   overflow: hidden;
   visibility: hidden;
 }
+/* 头像 */
 .self-face {
   float: left;
   -webkit-border-radius: 50%;
@@ -146,11 +156,14 @@ body {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
+/* 描述 */
 .self-des {
   margin-left: 30px;
   margin-top: 15px;
   font-family: '微软雅黑';
   float: left;
+  /* 姓名 */
+  /* 地址 */
 }
 .self-des .self-name {
   font-size: 24px;
@@ -169,6 +182,8 @@ body {
   padding-bottom: 22px;
   *zoom: 1;
   font-family: '微软雅黑';
+  /* 现在时间 */
+  /* 浏览时长 */
 }
 .nav-time:after,
 .nav-time:before {
@@ -182,6 +197,7 @@ body {
 .nav-time .time-now {
   float: left;
   font-weight: bold;
+  text-align: center;
   width: 55%;
   font-size: 45px;
   border-right: 1px solid #CCC3A6;
@@ -203,6 +219,8 @@ body {
   font-family: '微软雅黑';
   font-size: 22px;
   font-weight: 300;
+  /* 滑动，点击后效果 */
+  /* 主体导航列表 */
 }
 .nav-list .active {
   background-color: #7a7768;
@@ -211,10 +229,6 @@ body {
   color: #ffffff;
 }
 .nav-list li {
-  display: block;
-  padding-top: 23px;
-  padding-bottom: 23px;
-  text-align: center;
   cursor: pointer;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
@@ -229,8 +243,17 @@ body {
   color: #ffffff;
 }
 .nav-list a {
+  display: block;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  text-align: center;
   color: #7a7768;
   text-decoration: none;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
 }
 /* 电量 */
 .nav-battery {
@@ -267,7 +290,10 @@ body {
 /**
  * *********************************** 导览机 个人首页 样式 **********************************************
  */
+/* 右侧内容 */
 .content {
+  /* 天气 */
+  /* 内容列表和导航 */
   /* 图片排列 */
 }
 .content-share {
@@ -418,6 +444,7 @@ body {
 .content .preview-nav {
   display: block;
   *zoom: 1;
+  /* 内容导航列表 */
 }
 .content .preview-nav:after,
 .content .preview-nav:before {
@@ -433,14 +460,10 @@ body {
   width: 33.3333%;
   border-top: 3px solid #F5F3E9;
   background: #F5F3E9;
-  display: block;
   font-size: 24px;
   cursor: pointer;
   font-weight: bold;
   font-family: '宋体';
-  text-align: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   -ms-transition: all .3s ease;
@@ -453,6 +476,10 @@ body {
   color: #9B7640;
 }
 .content .preview-nav a {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
   color: #BB995D;
   text-decoration: none;
 }
@@ -532,6 +559,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
+/* 右侧内容 */
 .content-collect {
   height: 100%;
   *zoom: 1;
@@ -545,14 +573,16 @@ body {
   overflow: hidden;
   visibility: hidden;
 }
+/* 图片显示 */
 .collect-imgView {
   width: 483.021px;
   overflow-y: scroll;
   height: 100%;
   background-color: #F8F8F8;
-  padding: 10px 0 10px 10px;
+  padding: 10px 0 0 10px;
   float: left;
   position: relative;
+  /* 单个图片样式 */
 }
 .collect-imgView .collect-imgView-item {
   width: 214px;
@@ -560,11 +590,15 @@ body {
   padding: 6px;
   padding-bottom: 10px;
   background-color: #FFF6E2;
+  float: left;
   margin-right: 10px;
   margin-bottom: 10px;
 }
 .collect-imgView img {
   width: 214px;
+}
+.collect-imgView img:last-child {
+  margin-top: 10px;
 }
 .collect-imgView h4 {
   line-height: 1.7em;
@@ -579,6 +613,7 @@ body {
   color: #7B7B7B;
   font-size: 12px;
 }
+/* 文章详情 */
 .collect-article {
   float: left;
   width: 887.039px;
@@ -591,10 +626,12 @@ body {
   box-sizing: border-box;
   padding: 35px 35px;
 }
+/* 文章详情 --头部 */
 .collect-article-header {
   *zoom: 1;
   margin-bottom: 15px;
   position: relative;
+  /* 文章详情--社交 */
 }
 .collect-article-header:after,
 .collect-article-header:before {
@@ -622,6 +659,9 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
+  /* 文章详情--收藏 */
+  /* 文章详情--评论 */
+  /* 文章详情--喜欢人数 */
 }
 .collect-article-header .collect-article-sns .collect-article-collect {
   font-size: 14px;
@@ -650,6 +690,7 @@ body {
   position: relative;
   top: 8px;
 }
+/* 文章详情--文章导航 */
 .collect-article-nav {
   border-top: 1px solid #E7BF73;
   border-bottom: 1px solid #E7BF73;
@@ -697,6 +738,7 @@ body {
   position: relative;
   top: -6px;
 }
+/* 文章详情--文章内容 */
 .collect-article-box {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -704,6 +746,8 @@ body {
   font-size: 20px;
   line-height: 1.6em;
   overflow-y: scroll;
+  /* 文章详情--包裹的图片 */
+  /* 文本选择 */
 }
 .collect-article-box p {
   text-indent: 2em;
@@ -770,4 +814,286 @@ body {
 }
 .collect-article-box .collect-article-inline img {
   width: 260px;
+}
+.collect-article-box::selection {
+  background: #FFF688;
+}
+.collect-article-box::-moz-selection {
+  background: #FFF688;
+}
+.collect-article-box::-webkit-selection {
+  background: #FFF688;
+}
+/**
+ * *********************************** 导览机 浏览历史 样式 **********************************************
+ */
+/* 浏览历史 */
+.history-view {
+  width: 493.021px;
+  overflow-y: scroll;
+  height: 100%;
+  background-color: #FFFAEE;
+  float: left;
+  text-shadow: none;
+}
+/* 浏览历史 --- 单个模块*/
+.history-view-item {
+  border-bottom: 1px solid #C47C2F;
+  margin: 10px 10px;
+  overflow: hidden;
+}
+.history-view-item:last-child {
+  border-bottom: 0;
+}
+.history-view-item:last-child li:last-child:after {
+  width: 0;
+  height: 0;
+  content: '';
+}
+/* 浏览历史 --- 时间日期 */
+.history-view-itemTime {
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #C47C2F;
+  font-weight: bold;
+  padding-left: 10px;
+}
+/* 浏览历史 --- 浏览列表 */
+.history-view-itemList {
+  position: relative;
+  *zoom: 1;
+}
+.history-view-itemList:after,
+.history-view-itemList:before {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.history-view-itemList ul {
+  width: 380px;
+  float: right;
+}
+.history-view-itemList li {
+  border: 1px solid #E2E3DF;
+  background-color: #F6F1E6;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 2px #f6f1e6;
+  -moz-box-shadow: 1px 1px 2px #f6f1e6;
+  -ms-box-shadow: 1px 1px 2px #f6f1e6;
+  -o-box-shadow: 1px 1px 2px #f6f1e6;
+  box-shadow: 1px 1px 2px #f6f1e6;
+  margin-bottom: 8px;
+  position: relative;
+}
+.history-view-itemList li:last-child {
+  margin-bottom: 15px;
+}
+.history-view-itemList li:first-child:before {
+  width: 22px;
+  height: 22px;
+  left: -61px;
+  margin-top: -11px;
+}
+.history-view-itemList li:before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #DEAE5C;
+  position: absolute;
+  left: -57px;
+  top: 50%;
+  margin-top: -7px;
+}
+.history-view-itemList li:after {
+  content: '';
+  width: 2px;
+  height: 85px;
+  background-color: #DEAE5C;
+  position: absolute;
+  left: -51px;
+  top: 50%;
+}
+.history-view-itemList li:hover {
+  border: 1px solid #F2D284;
+  background-color: #FFF6E2;
+}
+.history-view-itemList .active {
+  border: 1px solid #F2D284;
+  background-color: #FFF6E2;
+}
+.history-view-itemList a {
+  display: block;
+  text-decoration: none;
+  color: #485657;
+  padding: 15px 10px;
+  padding: 0 10px 18px 10px;
+}
+.history-view-itemList a > span:first-child {
+  -moz-inline-stack: inline-block;
+  display: inline-block;
+  text-align: center;
+  border-right: 2px solid #D6CFBB;
+  width: 74px;
+}
+.history-view-itemList a > span:last-child {
+  -moz-inline-stack: inline-block;
+  display: inline-block;
+  width: 251px;
+  padding-left: 20px;
+  position: relative;
+  *zoom: 1;
+  top: 10px;
+}
+.history-view-itemList a > span:last-child:after,
+.history-view-itemList a > span:last-child:before {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.history-view-itemList a > span:last-child h4 {
+  font-size: 18px;
+  line-height: 1.8em;
+}
+.history-view-itemList a > span:last-child small {
+  font-size: 14px;
+  color: #797979;
+  float: left;
+}
+.history-view-itemList a > span:last-child span {
+  font-size: 12px;
+  color: #797979;
+  font-family: '微软雅黑';
+  float: right;
+}
+/**
+ * *********************************** 导览机 我的浏览路线 样式 **********************************************
+ */
+.content-viewway {
+  height: 100%;
+  background-color: #E4DDC5;
+}
+.content-viewway ul {
+  border-left: 1px solid #D3BDA0;
+  font-size: 24px;
+  *zoom: 1;
+}
+.content-viewway ul:after,
+.content-viewway ul:before {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.content-viewway ul .active {
+  background-color: #F6F1DE;
+}
+.content-viewway li {
+  float: left;
+  width: 50%;
+  background-color: #E5DFCD;
+}
+.content-viewway li a {
+  color: #9B7640;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.content-viewway .content-view-map {
+  height: 828px;
+  box-shadow: 0 0 20px 8px #D8C4A5 inset;
+  position: relative;
+  background: url(../img/map.png) no-repeat;
+  background-size: 1380px 828px;
+}
+.content-viewway .map-local-box {
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  position: absolute;
+}
+.content-viewway .map-local-box .map-local-boxImg {
+  width: 100%;
+  height: 90px;
+  display: block;
+  position: relative;
+  text-align: center;
+  background: url(../img/smallImg_bg.png) no-repeat center 0px;
+  background-size: 60px 80px;
+}
+.content-viewway .map-local-box .map-local-boxImg img {
+  width: 48px;
+  margin-top: 8px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.content-viewway .map-local-box .map-local-boxTxt {
+  -moz-inline-stack: inline-block;
+  display: inline-block;
+  padding: 5px 15px 5px 15px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  border: 1px solid #B5B3AB;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.content-viewway .map-local-box .map-local-boxTxt > a {
+  color: #634F45;
+  font-family: '微软雅黑';
+  font-size: 18px;
+  text-decoration: none;
+}
+.content-viewway .map-local-box .map-local-boxTime {
+  -moz-inline-stack: inline-block;
+  display: inline-block;
+  width: 110px;
+  margin-top: 5px;
+  padding: 5px 13px 2px 13px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 2px 2px 5px #acacac;
+  -moz-box-shadow: 2px 2px 5px #acacac;
+  -ms-box-shadow: 2px 2px 5px #acacac;
+  -o-box-shadow: 2px 2px 5px #acacac;
+  box-shadow: 2px 2px 5px #acacac;
+  background: url(../img/sj.png) no-repeat 13px center;
+  background-size: 30px 30px;
+  background-color: #FDFDFD;
+  text-align: right;
+  font-size: 14px;
+  font-family: '微软雅黑';
+}
+.content-viewway .map-local-box .map-local-boxTime span {
+  font-size: 26px;
+  font-weight: bold;
+  font-family: '微软雅黑';
 }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name=”"viewport" />
+	
+	<title>个人收藏</title>
+	<link rel="stylesheet" href="css/self.css">
+</head>
+<body>
+	<div class="container">
+		<nav class="nav">
+			<div class="nav-self">
+				<div class="self-face">
+					<img src="img/face.png" alt="">
+				</div>
+				<div class="self-des">
+					<span class="self-name">张三疯</span>
+					<span class="self-address">来自天津</span>
+				</div>
+			</div>
+			<!-- /.self -->
+			<div class="nav-time">
+				<div class="time-now">
+					00:00
+				</div>
+				<div class="time-review">
+					已经游览时间<br>
+					<span>2</span>小时<span>15</span>分
+				</div>
+			</div>
+			<!-- /.nav-time -->
+			<ul class="nav-list">
+				<li><a href="myindex.html">我的首页</a></li>
+				<li><a href="way.html">我的博物馆路线</a></li>
+				<li><a href="collect.html">我的收藏</a></li>
+				<li><a href="history.html">我的浏览历史</a></li>
+				<li class="active"><a href="viewway.html">我的游览路线</a></li>
+				<li><a href="">我的好友</a></li>
+				<li><a href="">我的互动游戏</a></li>
+			</ul>
+			<div class="nav-battery">
+				<span>电量 </span>
+				<progress value="85" max="100"></progress>
+				<span>85%</span>
+			</div>
+			<!-- /.nav-battery -->
+		</nav>
+		<!-- /.nav -->
+		<div class="content">
+			<div class="content-viewway">
+				<ul>
+					<li class="active"><a href="">已游览路线</a></li>
+					<li><a href="">未游览路线</a></li>
+				</ul>
+				<div class="content-view-map">
+					<!-- js 动态生成 -->
+				</div>
+				<!-- /.content-view-map -->
+			</div>
+			<!-- /.content-viewway -->
+		</div>
+		<!-- /.content -->
+	</div>
+	<!-- /.container -->
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+		// API {x:'x坐标',y:'y坐标',link:'跳转链接',src:'图片链接',text:'文字说明'}
+		/*圆形坐标点*/
+		arr = [
+  			{x:140, y:180,link:'detail.html',src:'img/img01.jpg',text:'胭脂红瓷盖碗'},
+		    {x:60, y:400,link:'detail.html',src:'img/img02.jpg',text:'胭脂红瓷盖碗'},
+		    {x:360, y:230,link:'detail.html',src:'img/img01.jpg',text:'胭脂红瓷盖碗'},
+		    {x:310, y:500,link:'detail.html',src:'img/img02.jpg',text:'胭脂红瓷盖碗'},
+		    {x:140, y:620,link:'detail.html',src:'img/img01.jpg',text:'胭脂红瓷盖碗'},
+		    {x:700, y:610,link:'detail.html',src:'img/img01.jpg',text:'胭脂红瓷盖碗'},
+		    {x:550, y:450,link:'detail.html',src:'img/img01.jpg',text:'胭脂红瓷盖碗'},
+		    {x:580, y:240,link:'detail.html',src:'img/img01.jpg',text:'胭脂红瓷盖碗'},
+		    {x:750, y:150,link:'detail.html',src:'img/img01.jpg',text:'胭脂红瓷盖碗'},
+		    {x:850, y:450,link:'detail.html',src:'img/img01.jpg',text:'胭脂红瓷盖碗'}
+		];
+		arr.forEach(function(v,i){
+			var html='<div class="map-local-box" style="left:'+v.x+'px;top:'+v.y+'px;"><div class="map-local-boxImg"><img src="'+v.src+'" alt=""></div><div class="map-local-boxTxt"><a href="'+v.link+'">'+v.text+'</a></div><div class="map-local-boxTime">浏览时间<br><span>12:03</span></div></div>';
+			($('.content-view-map')).append(html)
+		});
+		
+
+	</script>
+</body>
+</html>

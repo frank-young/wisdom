@@ -12,6 +12,10 @@ body{
 @lc:#7A7768;    //line-color 边框线颜色
 @w:@width*0.85;     //  1782px
 
+/**
+ * *********************************** 外层包裹 ***********************************
+ */
+
 .container{ 
     width: @w;
     height: 900px;
@@ -23,6 +27,7 @@ body{
     .m(a,30px,auto);
     .border-radius(10px);
     .cls();
+    .box-shadow(5px,17px,20px,rgba(0,0,0,0.2));
     /* 个人中心和导航 */
     .nav{
         .f(l);
@@ -43,6 +48,8 @@ body{
 /**
  * *********************************** 个人中心 （页面左侧整体样式，不用修改）***********************************
  */
+
+/* 个人信息 */
 .nav-self{
     background-color:#F6F1DE;
     position: relative;
@@ -50,6 +57,7 @@ body{
     border-bottom: 1px solid @lc;
     .cls();
 }
+/* 头像 */
 .self-face{
     .f(l);
     .border-radius(50%);
@@ -62,15 +70,18 @@ body{
          .border-radius(50%);
     }
 }
+/* 描述 */
 .self-des{
     .m(l,30px);
     .m(t,15px);
     .ff(w);
     .f(l);
+    /* 姓名 */
     .self-name{
         font-size: @f24;
         .ds(b);
     }
+    /* 地址 */
     .self-address{
         font-size: @f14;
         .ds(b);
@@ -85,13 +96,16 @@ body{
     .p(b,22px);
     .cls();
     .ff(w);
+    /* 现在时间 */
     .time-now{
         .f(l);
         .fw(b);
+        .ta(c);
         width: 55%;
         font-size: 45px;
         border-right: 1px solid #CCC3A6;
     }
+    /* 浏览时长 */
     .time-review{
         width: 38%;
         font-size: @f12;
@@ -110,17 +124,15 @@ body{
     .ff(w);
     font-size:@f22;
     font-weight: 300;
+    /* 滑动，点击后效果 */
     .active{
         background-color: @lc;
         &>a{
             color: @gf;
         }
     }
+    /* 主体导航列表 */
     li{
-        display: block;
-        .p(t,23px);
-        .p(b,23px);
-        .ta(c);
         cursor: pointer;
         .transition();
         &:hover{
@@ -131,8 +143,13 @@ body{
         }
     }
     a{
+        display: block;
+        .p(t,23px);
+        .p(b,23px);
+        .ta(c);
         color: @lc;
         .td(n);
+        .transition();
     }
    
 }
@@ -164,6 +181,7 @@ body{
 /**
  * *********************************** 导览机 个人首页 样式 **********************************************
  */
+/* 右侧内容 */
 .content{
     @imgH:272px;
     @imgW:583px;
@@ -173,6 +191,7 @@ body{
         height: @imgH;
         .cls();
         .f(l);
+
         .share-item{
             float: left;
             .pos(r);
@@ -212,6 +231,7 @@ body{
             img{width: 191px;height: @imgH/2;}
         }
     }
+    /* 天气 */
     &-weather{
         width: @w*0.82*0.3; 
         height:@imgH;
@@ -282,23 +302,21 @@ body{
         width: 100%;
         background-color: @gf;
     }
-    //内容列表和导航
+    /* 内容列表和导航 */
     .preview-nav{
         display: block;
         .cls();
+        /* 内容导航列表 */
         li{
             .f(l);
             width: 33.3333%;
             border-top:3px solid #F5F3E9;
             background: #F5F3E9;
-            display: block;
+            
             font-size: @f24;
             cursor: pointer;
             .fw(b);
             .ff(s);
-            .ta(c);
-            .p(t,12px);
-            .p(b,12px);
             .transition();
             &:hover{
                 background-color:@gf;
@@ -307,6 +325,10 @@ body{
             }
         }
         a{
+            display: block;
+            .p(t,12px);
+            .p(b,12px);
+            .ta(c);
             color:#BB995D;
             .td(n);
         }
@@ -378,33 +400,37 @@ body{
     background-color:rgba(0, 0, 0, 0.1);
 }
 
+/* 右侧内容 */
 .content-collect{
     height: 100%;
     .cls();
 }
+/* 图片显示 */
 .collect-imgView{
     width: @w*0.82*0.35;
     overflow-y: scroll;
     height: 100%;
     background-color: #F8F8F8;
-    padding: 10px 0 10px 10px;
+    padding: 10px 0 0 10px;
     .f(l);
     .pos(r);
     // .cls();
-    // -webkit-column-count: 2;
-    // column-count: 2;
+    /* 单个图片样式 */
     .collect-imgView-item{
         width: 214px;
         border:1px solid #F5A86E;
         padding: 6px;
         .p(b,10px);
         background-color: #FFF6E2;
-        // .f(l);
+        .f(l);
         .m(r,10px);
         .m(b,10px);
     }
     img{
         width: 214px;
+    }
+    img:last-child{
+        margin-top: 10px;
     }
     h4{
         line-height: 1.7em;
@@ -420,6 +446,7 @@ body{
         font-size: @f12;
     }
 }
+/* 文章详情 */
 .collect-article{
     .f(l);
     width: @w*0.82*0.65-10px;
@@ -428,6 +455,7 @@ body{
     .box-sizing();
     .p(a,35px,35px);
 }
+/* 文章详情 --头部 */
 .collect-article-header{
     .cls();
     .m(b,15px);
@@ -445,10 +473,12 @@ body{
             color: #797979;
         }
     }
+    /* 文章详情--社交 */
     .collect-article-sns{
         .pos(a);
         bottom: 0;
         right: 0;
+        /* 文章详情--收藏 */
         .collect-article-collect{
             font-size: @f14;
             color: #FFBF00;
@@ -459,6 +489,7 @@ body{
                 .ds(b);
             }
         }
+        /* 文章详情--评论 */
         .collect-article-comment{
             font-size: @f18;
             color: #485657;
@@ -468,6 +499,7 @@ body{
                 top:8px;
             }
         }
+        /* 文章详情--喜欢人数 */
         .collect-article-like{
             font-size: @f18;
             color: #485657;
@@ -479,6 +511,7 @@ body{
     }
 
 }
+/* 文章详情--文章导航 */
 .collect-article-nav{
     border-top: 1px solid #E7BF73;
     border-bottom: 1px solid #E7BF73;
@@ -515,6 +548,7 @@ body{
         }
     }
 }
+/* 文章详情--文章内容 */
 .collect-article-box{
     .m(t,20px);
     .m(b,20px);
@@ -525,6 +559,7 @@ body{
     p{
         text-indent: 2em;
     }
+    /* 文章详情--包裹的图片 */
     .collect-article-inline{
         .f(r);
         width: 280px;
@@ -572,6 +607,251 @@ body{
             width: 260px;
         }
     }
-    
+
+    /* 文本选择 */
+    &::selection {
+        background:#FFF688; 
+    }
+
+    &::-moz-selection {
+        background:#FFF688; 
+    }
+
+    &::-webkit-selection {
+        background:#FFF688; 
+    }
     
 }
+/**
+ * *********************************** 导览机 浏览历史 样式 **********************************************
+ */
+
+/* 浏览历史 */
+.history-view{
+    width: @w*0.82*0.35+10px;
+    overflow-y: scroll;
+    height: 100%;
+    background-color: #FFFAEE;
+    .f(l);
+    text-shadow:none;
+}
+
+/* 浏览历史 --- 单个模块*/
+.history-view-item{
+    border-bottom: 1px solid #C47C2F;
+    .m(a,10px,10px);
+    overflow: hidden;
+    &:last-child{
+        border-bottom:0;
+        li:last-child:after{
+            width: 0;
+            height: 0;
+            content: '';
+        }
+    }
+}
+/* 浏览历史 --- 时间日期 */
+.history-view-itemTime{
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    font-size: @f20;
+    color:#C47C2F;
+    .fw(b);
+    .p(l,10px);
+}
+/* 浏览历史 --- 浏览列表 */
+.history-view-itemList{
+    @itemW:380px;
+    .pos(r);
+    .cls();
+    ul{
+        width: @itemW;
+        .f(r);
+    }
+    li{
+        border: 1px solid #E2E3DF;
+        background-color: #F6F1E6;
+        .border-radius();
+        .box-shadow(1px,1px,2px,#F6F1E6);
+        .m(b,8px);
+        .pos(r);
+        &:last-child{
+            .m(b,15px);
+        }
+        &:first-child:before{
+            width: 22px;
+            height: 22px;
+            left: -61px;
+            margin-top: -11px;
+        }
+        &:before{
+            content: '';
+            width: 14px;
+            height: 14px;
+            .border-radius(50%);
+            background-color: #DEAE5C;
+            .pos(a);
+            left: -57px;
+            top:50%;
+            margin-top: -7px;
+        }
+        &:after{
+            content: '';
+            width: 2px;
+            height: 85px;
+            background-color: #DEAE5C;
+            .pos(a);
+            left: -51px;
+            top:50%;
+        }
+        
+        &:hover{
+            border:1px solid #F2D284;
+            background-color: #FFF6E2;
+        }
+    }
+    .active{
+            border:1px solid #F2D284;
+            background-color: #FFF6E2;
+        }
+    a{
+        display: block;
+        .td(n);
+        color: #485657;
+        .p(a,15px,10px);
+        padding: 0 10px 18px 10px;
+
+    }
+    
+    a>span:first-child{
+        .ds(ib);
+        .ta(c);
+        border-right: 2px solid #D6CFBB;
+        width: @itemW*0.2-2px;
+        img{
+            
+        }
+    }
+    a>span:last-child{
+        .ds(ib);
+        width: @itemW*0.7-15px;
+        .p(l,20px);
+        .pos(r);
+        .cls();
+        top:10px;
+        h4{
+            font-size: @f18;
+            line-height: 1.8em;
+        }
+        small{
+            font-size: @f14;
+            color: #797979;
+            .f(l);
+        }
+        span{
+            font-size: @f12;
+            color: #797979;
+            .ff(w);
+            .f(r);
+        }
+
+    }
+
+}
+
+/**
+ * *********************************** 导览机 我的浏览路线 样式 **********************************************
+ */
+.content-viewway{
+    height: 100%;
+    background-color: #E4DDC5;
+    ul{
+        border-left: 1px solid #D3BDA0;
+        font-size: @f24;
+        .cls();
+        .active{
+            background-color: #F6F1DE;
+        }
+    }
+    li{
+        .f(l);
+        width: 50%;
+        background-color: #E5DFCD;
+         a{
+        color: #9B7640;
+        .fw(b);
+        .td(n);
+        .ds(b);
+        .ta(c);
+        .p(t,18px);
+        .p(b,18px);
+    }
+    }
+   
+    .content-view-map{
+        height: 828px;
+        box-shadow: 0 0 20px 8px #D8C4A5 inset;
+        .pos(r);
+        background: url(../img/map.png) no-repeat;
+        background-size:1380px 828px;
+        
+    }
+    .map-local-box{
+        width: 200px;
+        height: 150px;
+        .ta(c);
+        .pos(a);
+        .map-local-boxImg{
+            width: 100%;
+            height: 90px;
+            .ds(b);
+            .pos(r);
+            .ta(c);
+            background: url(../img/smallImg_bg.png) no-repeat center 0px;
+            background-size:60px 80px;
+            img{
+                width: 48px;
+                margin-top: 8px;
+                .border-radius(50%);
+            }
+        }
+        .map-local-boxTxt{
+            .ds(ib);
+            padding: 5px 15px 5px 15px;
+            .border-radius(20px);
+            border: 1px solid #B5B3AB;
+            background-color: rgba(255, 255, 255, 0.3);
+            &>a{
+                color: #634F45;
+                .ff(w);
+                font-size: @f18;
+                .td(n);
+            }
+            
+        }
+        .map-local-boxTime{
+            .ds(ib);
+           
+            width: 110px;
+            margin-top: 5px;
+            padding:5px 13px 2px 13px;
+            .border-radius(8px);
+            .box-shadow(2px,2px,5px,#acacac);
+            background: url(../img/sj.png) no-repeat 13px center;
+            background-size: 30px 30px;
+            background-color: #FDFDFD;
+            .ta(r);
+            font-size: @f14;
+            .ff(w);
+            span{
+                font-size: 26px;
+                .fw(b);
+                .ff(w);
+            }
+        }
+}
+
+}
+
+
